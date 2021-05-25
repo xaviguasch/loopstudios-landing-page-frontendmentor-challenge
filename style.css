@@ -1,3 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ================== */
+/* Custom properties */
+/* ================== */
+
+:root {
+  --ff-main: 'Josefin Sans', sans-serif;
+  --ff-secondary: 'Alata', sans-serif;
+
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-bold: 700;
+
+  --fs-07: 0.438rem;
+  --fs-08: 0.5em;
+  --fs-09: 0.563em;
+  --fs-10: 0.625rem;
+  --fs-12: 0.75rem;
+  --fs-13: 0.813rem;
+  --fs-14: 0.875rem;
+  --fs-15: 0.938rem;
+  --fs-16: 1rem;
+  --fs-18: 1.125rem;
+  --fs-20: 1.25rem;
+  --fs-22: 1.375rem;
+  --fs-24: 1.5rem;
+  --fs-26: 1.625rem;
+  --fs-28: 1.75rem;
+  --fs-32: 2rem;
+  --fs-36: 2.25rem;
+  --fs-40: 2.5rem;
+  --fs-48: 3rem;
+  --fs-56: 3.5rem;
+  --fs-60: 3.75rem;
+  --fs-64: 4rem;
+  --fs-72: 4.5rem;
+  --fs-80: 5rem;
+
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-black: hsl(0, 0%, 0%);
+  --clr-dark-gray: hsl(0, 0%, 55%);
+  --clr-very-dark-gray: hsl(0, 0%, 41%);
+}
+
+body {
+  background-color: var(--clr-white);
+  color: var(--clr-black);
+  font-family: var(--ff-main);
+  font-size: var(--fs-15);
+  font-weight: var(--fw-regular);
+  line-height: 1.625;
+  text-align: left;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* ================== */
+/* Typography */
+/* ================== */
+
+.nav-link,
+.title,
+.image-name {
+  text-transform: uppercase;
+  font-weight: var(--fw-light);
+  line-height: 1;
+}
+
+.nav-link {
+  color: var(--clr-white);
+  font-size: var(--fs-24);
+  text-decoration: none;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  text-decoration: underline;
+}
+
+.title--big {
+  font-size: var(--fs-40);
+  color: var(--clr-white);
+}
+
+.title--small {
+  font-size: var(--fs-32);
+  text-align: center;
+}
+
+.text-copy {
+  font-family: var(--ff-secondary);
+  color: var(--clr-very-dark-gray);
+}
+
+.image-name {
+  color: var(--clr-white);
+  font-size: var(--fs-24);
+}
+
+/* ================== */
+/* Buttons & inputs */
+/* ================== */
+
+.btn {
+  font-family: var(--ff-secondary);
+  font-size: var(--fs-14);
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  background: transparent;
+  border: 1px solid var(--clr-black);
+  padding: 0.75em 3em;
+  cursor: pointer;
+}
+
+.btn:hover,
+.btn:focus {
+  background: var(--clr-black);
+  color: var(--clr-white);
+}
+
+/* ================== */
+/* Utility styles */
+/* ================== */
+
+.container {
+  padding: 0 1.25em;
+  margin: 0 auto;
+}
+
+/* ================== */
+/* SECTIONS */
+/* ================== */
+
+/* Header and Hero */
+.header-and-hero {
+  background: url('./images/mobile/image-hero.jpg') no-repeat;
+  background-size: cover;
+  background-position: 0% 0%;
+  height: 650px;
+
+  padding-top: 1em;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.logo .logo-img {
+  padding-top: 0.5em;
+  width: 145px;
+}
+
+.open-nav {
+  background: transparent;
+  border: none;
+}
+
+.nav {
+  /* Position */
+  position: fixed;
+  top: 99px;
+  right: 0;
+  bottom: 0;
+  left: 100%;
+}
+
+.hero {
+  margin-top: 11em;
+}
+
+.box {
+  border: 2px solid var(--clr-white);
+  padding: 1.25em 1em;
+}
+
+.title--big {
+  width: 90%;
+}
+
+/* Main */
+.main {
+  padding-top: 6em;
+  padding-bottom: 6em;
+}
+
+.section-a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-a .title {
+  margin-top: 1.25em;
+}
+
+.section-a .text-copy {
+  margin: 1.25em auto 0;
+  width: 85%;
+  text-align: center;
+}
+
+.section-b {
+  padding-top: 6em;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  gap: 3em;
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 1em;
+}
+
+.image-grid__single {
+  position: relative;
+}
+
+.image-grid-img-desktop {
+  display: none;
+}
+/* ================== */
+/* ================== */
+/* ================== */
+/* ================== */
+
 .attribution {
   font-size: 11px;
   text-align: center;
