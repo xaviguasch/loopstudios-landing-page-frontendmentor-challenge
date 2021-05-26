@@ -296,7 +296,9 @@ img {
 /* Footer */
 .footer {
   background: var(--clr-black);
+}
 
+.footer .container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -381,6 +383,10 @@ img {
     font-size: var(--fs-48);
   }
 
+  .image-name {
+    font-size: var(--fs-32);
+  }
+
   /* Utility styles */
   .container {
     max-width: 1112px;
@@ -391,6 +397,7 @@ img {
   .header-and-hero {
     padding-top: 3.5em;
     background: url('./images/desktop/image-hero.jpg') no-repeat;
+    background-size: cover;
   }
 
   .open-nav {
@@ -501,4 +508,112 @@ img {
   }
 
   /* Section B */
+
+  .section-b {
+    padding-top: 10em;
+
+    align-items: flex-start;
+
+    gap: 4em;
+
+    position: relative;
+  }
+
+  .image-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1.5em;
+  }
+
+  .image-grid__single {
+    cursor: pointer;
+  }
+
+  .image-grid-img-desktop {
+    display: unset;
+    filter: brightness(80%);
+  }
+
+  .image-grid__single:hover .image-grid-img-desktop,
+  .image-grid__single:focus .image-grid-img-desktop {
+    filter: contrast(40%) brightness(160%);
+  }
+
+  .image-grid__single:hover .image-name,
+  .image-grid__single:focus .image-name {
+    color: var(--clr-black);
+  }
+
+  .image-grid-img-mobile {
+    display: none;
+  }
+
+  .image-name {
+    position: absolute;
+    bottom: 40px;
+    left: 30px;
+    width: 70%;
+  }
+
+  .btn {
+    position: absolute;
+    top: 150px;
+    right: 17px;
+  }
+
+  /* Footer */
+  .footer .container {
+    padding: 3em 0 0.5em;
+  }
+
+  .footer-grid {
+    width: 100%;
+    grid-template-columns: 35% 40% 25%;
+    grid-template-rows: repeat(2, 1fr);
+
+    place-items: end start;
+
+    grid-template-areas:
+      'logo . socials'
+      'links . legal';
+  }
+
+  .footer-grid .logo {
+    grid-area: logo;
+  }
+
+  .footer-links {
+    grid-area: links;
+  }
+
+  .footer-socials {
+    margin-top: 0em;
+    width: 100%;
+
+    grid-area: socials;
+  }
+
+  .footer-legal {
+    grid-area: legal;
+  }
+
+  .footer .logo-img {
+    width: 144px;
+  }
+
+  .footer-links .nav-list {
+    margin-top: 0em;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2.5em;
+  }
+
+  .footer-socials ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1em;
+  }
 }
