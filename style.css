@@ -296,8 +296,6 @@ img {
 .image-name {
   position: absolute;
   bottom: 30px;
-  left: 20px;
-  width: 40%;
 }
 
 .image-grid-img-desktop {
@@ -408,7 +406,7 @@ img {
   .header-and-hero {
     padding-top: 3.5em;
     background: url('./images/desktop/image-hero.jpg') no-repeat;
-    background-size: ;
+    background-size: cover;
   }
 
   .open-nav {
@@ -536,14 +534,18 @@ img {
     grid-gap: 1.5em;
   }
 
-  .image-grid__single:hover .image-grid-img-desktop,
-  .image-grid__single:focus .image-grid-img-desktop {
-    filter: contrast(40%) brightness(160%);
+  .image-grid__single {
+    cursor: pointer;
   }
 
   .image-grid-img-desktop {
     display: unset;
     filter: brightness(80%);
+  }
+
+  .image-grid__single:hover .image-grid-img-desktop,
+  .image-grid__single:focus .image-grid-img-desktop {
+    filter: contrast(40%) brightness(160%);
   }
 
   .image-grid-img-mobile {
