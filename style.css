@@ -299,6 +299,7 @@ img {
   /* Position */
   position: absolute;
   bottom: 30px;
+  left: 15px;
 }
 
 .image-grid-img-desktop {
